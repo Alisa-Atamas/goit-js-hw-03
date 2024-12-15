@@ -1,17 +1,17 @@
 function filterArray(numbers, value) {
-   
-  filtered_numbers = [];
+    // Створюємо порожній масив для підходящих чисел
+    const result = [];
     
-   
-  for number in numbers{ 
-        
-  if number > value{
-    filtered_numbers.append(number);
+    // Ітерація через кожен елемент масиву
+    for (let i = 0; i < numbers.length; i++) {
+        // Якщо число більше за value, додаємо його до результату
+        if (numbers[i] > value) {
+            result.push(numbers[i]);
+        }
+    }
     
-    
-    return filtered_numbers;
-}
-
+    // Повертаємо новий масив з числами, більшими за value
+    return result;
 }
 
 console.log(filterArray([1, 2, 3, 4, 5], 3)); // [4, 5]

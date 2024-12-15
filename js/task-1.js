@@ -1,9 +1,10 @@
 function slugify(title) {
-    
-  title = title.lower();
-  title = re.sub(r'\s+', '-', title);
-  title = re.sub(r'[^a-z0-9\-]', '', title);
-  return title;
+    return title
+        .toLowerCase()               // Перетворює всі символи в нижній регістр
+        .trim()                      // Видаляє зайві пробіли на початку і в кінці рядка
+        .replace(/\s+/g, '-')        // Заміна всіх пробілів на тире
+        .replace(/[^a-z0-9-]/g, '')  // Видаляє всі символи, які не є літерами, цифрами або тире
+        .replace(/--+/g, '-');       // Видаляє зайві тире
 }
 
 console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"

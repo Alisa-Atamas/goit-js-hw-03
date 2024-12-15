@@ -1,13 +1,14 @@
 function makeArray(firstArray, secondArray, maxLength) {
+    // Об'єднуємо два масиви
+    const combinedArray = firstArray.concat(secondArray);
     
-  combinedArray = firstArray + secondArray;
-   
-  if len(combinedArray) > maxLength{
-    return combinedArray[maxLength];
-    else { 
-      return combinedArray;
-  }
-  }
+    // Якщо довжина об'єднаного масиву більша за maxLength, повертаємо лише maxLength елементів
+    if (combinedArray.length > maxLength) {
+        return combinedArray.slice(0, maxLength);
+    }
+    
+    // Якщо довжина не перевищує maxLength, повертаємо весь масив
+    return combinedArray;
 }
 
 console.log(makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3)); // ["Mango", "Poly", "Ajax"]
