@@ -1,4 +1,4 @@
-function slugify(title) {hhhhhh
+function slugify(title) {
     return title
         .toLowerCase()               // Перетворює всі символи в нижній регістр
         .trim()                      // Видаляє зайві пробіли на початку і в кінці рядка
