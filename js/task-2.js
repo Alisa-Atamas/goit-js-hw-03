@@ -3,7 +3,7 @@ function makeArray(firstArray, secondArray, maxLength) {
   combinedArray = firstArray + secondArray;
    
   if len(combinedArray) > maxLength{
-    return combinedArray[:maxLength];
+    return combinedArray[maxLength];
     else { 
       return combinedArray;
   }
