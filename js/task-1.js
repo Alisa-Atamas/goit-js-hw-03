@@ -1,12 +1,10 @@
-function slugify(title):
-    # Перетворюємо рядок у нижній регістр
-    title = title.lower()
-    # Заміняємо всі пробіли на тире
-    title = re.sub(r'\s+', '-', title)
-    # Видаляємо всі небажані символи (залишаємо тільки літери, цифри та тире)
-    title = re.sub(r'[^a-z0-9\-]', '', title)
-    return title
-
+function slugify(title) {
+    
+  title = title.lower();
+  title = re.sub(r'\s+', '-', title);
+  title = re.sub(r'[^a-z0-9\-]', '', title);
+  return title;
+}
 
 console.log(slugify("Arrays for beginners")); // "arrays-for-beginners"
 console.log(slugify("English for developer")); // "english-for-developer"
